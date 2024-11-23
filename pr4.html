@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+
+<header>
+    <img src="nugget.png" alt="nugget">
+    <form action="#" method="get">
+        <label for="search">Search</label>
+        <input type="search" id="search" name="search" placeholder="Search">
+        <button type="submit">Search</button>
+    </form>
+</header>
+
+<main>
+    <h1>Feedback Form</h1>
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Особиста інформація</legend>
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="firstname"><br>
+
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lastname"><br>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Адреса</legend>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address"><br>
+
+            <label for="city">City/Town</label>
+            <input type="text" id="city" name="city"><br>
+
+            <label for="zip">ZIP/Postal Code</label>
+            <input type="text" id="zip" name="zip"><br>
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="none">- None -</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+            </select><br>
+        </fieldset>
+
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone"><br>
+
+
+        <fieldset>
+            <legend>Чи була ця сторінка корисною?</legend>
+            <label><input type="radio" name="helpful" value="yes"> Yes</label><br>
+            <label><input type="radio" name="helpful" value="no"> No</label><br>
+        </fieldset>
+
+
+        <label for="comments">Ваші коментарі</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
+<footer>
+    <p>© 2024 гав</p>
+</footer>
+
+</body>
+</html>
