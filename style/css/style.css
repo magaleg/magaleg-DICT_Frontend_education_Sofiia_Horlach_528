@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Press Start 2P", sans-serif;
+  font-family: "Monospace", monospace;
   color: #b5b5b5;
   text-align: center;
   position: relative;
@@ -14,6 +14,7 @@ a {
 }
 a:hover {
   text-decoration: underline;
+  color: #ffcc00;
 }
 
 .background {
@@ -26,6 +27,7 @@ a:hover {
   background-size: cover;
   z-index: -1;
   filter: brightness(0.7);
+  border: 2px solid #573b2e;
 }
 
 .header {
@@ -35,10 +37,24 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid #573b2e;
+}
+.header .logo img {
+  width: 50px;
+  height: auto;
+  border: 2px solid #ffcc00;
+  border-radius: 50%;
 }
 .header .nav a {
   margin: 0 15px;
   padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.header .nav a:hover {
+  background: #ffcc00;
+  color: #000;
+  border-radius: 5px;
 }
 
 .highlight {
@@ -47,17 +63,22 @@ a:hover {
   justify-content: center;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #573b2e;
 }
 .highlight .hero {
-  color: #ffffff;
+  color: #573b2e;
   text-align: center;
 }
 .highlight .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 .highlight .hero p {
   font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
 }
 
 .about,
@@ -66,26 +87,93 @@ a:hover {
   padding: 30px;
   margin: 20px auto;
   max-width: 800px;
-  background: #ffffff;
+  background: #573b2e;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.5);
 }
 .about h2,
 .portfolio h2,
 .contact h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  text-decoration: underline;
 }
 .about p,
 .portfolio p,
 .contact p {
   font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+.about .grid,
+.portfolio .grid,
+.contact .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.about .grid .grid-item,
+.portfolio .grid .grid-item,
+.contact .grid .grid-item {
+  height: 100px;
+  background: #ddd;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.about .socials a,
+.portfolio .socials a,
+.contact .socials a {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #573b2e;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.about .socials a:hover,
+.portfolio .socials a:hover,
+.contact .socials a:hover {
+  background: #ffcc00;
+  color: #000;
 }
 
 .footer {
   padding: 20px;
   background: rgba(0, 0, 0, 0.5);
   color: white;
+  border-top: 2px solid #573b2e;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background: #573b2e;
+  color: rgba(0, 0, 0, 0.5);
+  width: calc(100% - 24px);
+}
+input:focus,
+textarea:focus,
+button:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background: #ffcc00;
+  color: #000;
+}
+button:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: #573b2e;
 }
 
 /*# sourceMappingURL=style.css.map */
